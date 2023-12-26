@@ -13,23 +13,21 @@ using System.Windows.Forms;
 
 namespace Gazi.OkulAppSube2BLG
 {
-    public partial class frmOgrKayit : Form
+    public partial class frmOgrtKayit : Form
     {
-        public frmOgrKayit()
+        public frmOgrtKayit()
         {
             InitializeComponent();
         }
 
-       
-      
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             try
             {
-                
 
-                var obl = new OgrenciBL();
-                bool sonuc = obl.OgrenciEkle(new Ogrenci { Ad = txtAd.Text.Trim(), Soyad = txtSoyad.Text.Trim(), Numara = txtNumara.Text.Trim() });
+
+                var ob = new OgretmenBL();
+                bool sonuc = ob.OgretmenEkle(new Ogretmen { Ad = txtAd.Text.Trim(), Soyad = txtSoyad.Text.Trim(), Tc = txtTc.Text.Trim() });
                 MessageBox.Show(sonuc ? "Ekleme başarılı!" : "Ekleme başarısız!!");
             }
             catch (SqlException ex)
@@ -39,7 +37,7 @@ namespace Gazi.OkulAppSube2BLG
                     case 2627:
                         MessageBox.Show("Bu numara daha önce kayıtlı");
                         break;
-                    default:                        
+                    default:
                         MessageBox.Show("Veritabanı Hatası!");
                         break;
                 }
@@ -50,7 +48,4 @@ namespace Gazi.OkulAppSube2BLG
             }
         }
     }
-
-  
 }
-

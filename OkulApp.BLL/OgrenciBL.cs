@@ -19,7 +19,7 @@ namespace OkulApp.BLL//Bussiness Logic Layer
                             };
 
                 var hlp = new Helper();
-                return hlp.ExecuteNonQuery("Insert into tblOgrenciler (Ad,Soyad,Numara) values (@Ad,@Soyad,@Numara)", p) > 0;
+                return hlp.ExecuteNonQuery("Insert into tblOgrenci (Ad,Soyad,Numara) values (@Ad,@Soyad,@Numara)", p) > 0;
             }
             catch (SqlException)
             {
@@ -31,13 +31,7 @@ namespace OkulApp.BLL//Bussiness Logic Layer
             }
             finally
             {
-                //if (cn != null && cn.State != ConnectionState.Closed)
-                //{
-                //    //cn.Close();
-                //    cn.Dispose();
-
-                //    cmd.Dispose();
-                //}
+                
             }
         }
 
