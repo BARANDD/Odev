@@ -106,6 +106,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{5823188d-0a09-4b14-9855-c5d242e31b2c}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OkulApp.BLL\OkulApp.BLL.csproj">
       <Project>{2ce9d75a-6eba-4b28-86fc-acedb1a88209}</Project>
       <Name>OkulApp.BLL</Name>
