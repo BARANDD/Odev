@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OkulApp.MODEL
 {
-    internal class Ogretmen
+    public class Ogretmen
     {
         public int Id { get; set; }
         public string Ad { get; set; }

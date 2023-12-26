@@ -7,7 +7,7 @@ using System.Text;
 
 namespace OkulApp.BLL
 {
-    internal class OgretmenBL
+    public class OgretmenBL
     {
         public bool OgretmenEkle(Ogretmen og)
         {
@@ -20,7 +20,7 @@ namespace OkulApp.BLL
                             };
 
                 var hlp = new Helper();
-                return hlp.ExecuteNonQuery("Insert into tblOgretmen (Ad,Soyad,Tc) values (@Ad,@Soyad,@Tc)", p) > 0;
+                return hlp.ExecuteNonQuery("Insert into Ogretmen (Ad,Soyad,Tc) values (@Ad,@Soyad,@Tc)", p) > 0;
             }
             catch (SqlException)
             {

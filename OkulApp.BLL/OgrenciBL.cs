@@ -19,7 +19,7 @@ namespace OkulApp.BLL//Bussiness Logic Layer
                             };
 
                 var hlp = new Helper();
-                return hlp.ExecuteNonQuery("Insert into tblOgrenci (Ad,Soyad,Numara) values (@Ad,@Soyad,@Numara)", p) > 0;
+                return hlp.ExecuteNonQuery("Insert into Ogrenci (Ad,Soyad,Numara) values (@Ad,@Soyad,@Numara)", p) > 0;
             }
             catch (SqlException)
             {
